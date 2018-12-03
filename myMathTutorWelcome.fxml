@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.myMathTutorWelcomeContoller">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="700.0">
+         <children>
+            <TabPane prefHeight="200.0" prefWidth="657.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0">
+              <tabs>
+                <Tab text="Welcome">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="700.0">
+                           <children>
+                              <Text fx:id="welcomeText" layoutX="41.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome back" textAlignment="CENTER" wrappingWidth="596.13671875" AnchorPane.bottomAnchor="391.25">
+                                 <font>
+                                    <Font size="32.0" />
+                                 </font>
+                              </Text>
+                              <Button fx:id="lastActionBtn" layoutX="53.0" layoutY="79.0" mnemonicParsing="false" onAction="#continueLastAction" prefHeight="45.0" prefWidth="176.0" text="Continue Last ..." />
+                              <Text layoutX="488.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Stats:" />
+                              <Line endX="130.0" endY="-1.0" layoutX="507.0" layoutY="80.0" startX="-100.0" AnchorPane.bottomAnchor="362.2928931713104" />
+                              <Line endX="130.0" layoutX="507.0" layoutY="321.0" startX="-100.0" AnchorPane.bottomAnchor="121.5" />
+                              <Line endX="90.5" endY="-10.5" layoutX="315.0" layoutY="91.0" startX="90.5" startY="231.5" />
+                              <Line endX="-110.5" endY="231.5" layoutX="748.0" layoutY="91.0" startX="-110.5" startY="-10.0" AnchorPane.rightAnchor="62.0" />
+                              <Text layoutX="488.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overall Grade:" AnchorPane.bottomAnchor="337.0" />
+                              <Text layoutX="408.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Questions Answered" AnchorPane.bottomAnchor="186.0" />
+                              <Text layoutX="407.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lessons Completed:" AnchorPane.bottomAnchor="226.0" AnchorPane.rightAnchor="167.92578125" />
+                              <Text layoutX="410.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Right to wrong answer:" AnchorPane.bottomAnchor="149.2578125" AnchorPane.topAnchor="278.431640625" />
+                              <Text fx:id="overallTxtLabel" layoutX="503.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N/A" wrappingWidth="56.96875" AnchorPane.bottomAnchor="286.25">
+                                 <font>
+                                    <Font size="32.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="rtwTxtLabel" layoutX="585.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N/A" AnchorPane.bottomAnchor="148.2578125" />
+                              <Text fx:id="lessonCompTxtLabel" layoutX="585.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N/A" AnchorPane.bottomAnchor="228.2578125" />
+                              <Text fx:id="qAnsTxtLabel" layoutX="585.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N/A" AnchorPane.bottomAnchor="188.2578125" />
+                              <Button fx:id="logoutBtn" layoutX="535.0" layoutY="382.0" mnemonicParsing="false" onAction="#logOut" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: RED;" text="Logout" textFill="WHITE" />
+                              <Button fx:id="updateInfo" layoutX="405.0" layoutY="382.0" mnemonicParsing="false" onAction="#updateInfoAction" text="Update Info" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Quiz">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+      <MenuBar prefHeight="29.0" prefWidth="706.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Lessons">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Quiz">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="My Account">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
