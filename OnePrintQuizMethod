@@ -1,0 +1,20 @@
+// This is the print Quiz method that I built. Just copy and paste into the Quiz class
+
+public void printQuiz(ArrayList<Problem> quiz, String Filename) {
+		try (PrintWriter writer = new PrintWriter(Filename);) {
+
+			writer.format("Mathematics Quiz: \t\t\t\t\t\tName:____________ \n\n\n\n\n");
+			int i = 0;
+			for (Problem e : quiz) {
+				writer.format("%2d.  " + e.question + "_____\n\n", i + 1);
+				i++;
+
+			}
+
+			writer.format("\n\n\nScore:______");
+			System.out.println("File ready for printing!!");
+
+		} catch (FileNotFoundException e) {
+			// Throws this exception if the file is currently open and in use
+
+		}
